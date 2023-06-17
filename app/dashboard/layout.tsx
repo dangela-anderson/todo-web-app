@@ -1,10 +1,10 @@
-import "./globals.css"
 import { Inter } from "next/font/google"
+import Dashboard from "../components/Dashboard"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "ToDaily",
+  title: "Dashboard - ToDaily",
 }
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <Dashboard children={children}/>
       </body>
     </html>
   )
