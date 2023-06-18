@@ -3,10 +3,6 @@ import Dashboard from "@/app/components/Dashboard"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Dashboard - ToDaily",
-}
-
 export default function RootLayout({
   children,
 }: {

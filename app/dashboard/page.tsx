@@ -8,6 +8,10 @@ import CreateTaskModal from "@/app/components/CreateTaskModal"
 import EmptyState from "@/app/components/EmptyState"
 
 
+export const metadata = {
+  title: "Dashboard - ToDaily",
+}
+
 type Task = Database["public"]["Tables"]["Tasks"]["Row"]
 
 export default function Dashboard() {
@@ -18,8 +22,9 @@ export default function Dashboard() {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await supabase.from("Tasks").select()
-      setTasks(data)
+      // const { data, error } = await supabase.auth.getSession()
+      // const { data } = await supabase.from("Tasks").select()
+      // setTasks(data)
     }
 
     getData()
@@ -27,7 +32,7 @@ export default function Dashboard() {
 
   return (
     <div className="flex-1 flex flex-col w-full justify-start gap-y-10 py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full items-center justify-between mt-10">
         <h1 className="flex items-center justify-center text-lg text-slate-600 font-semibold">
           Recent Tasks 
           <p className="ml-2 text-sm font-light">({ tasks ? tasks.length : 0 })</p>

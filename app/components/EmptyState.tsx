@@ -6,7 +6,7 @@ interface EmptyStateProps {
 
 export default function EmptyState({ setOpen }: EmptyStateProps) {
     return (
-        <div className="flex items-center justify-center w-full h-full bg-white h-48 rounded-sm shadow-sm py-4">
+        <div className="flex items-center justify-center w-full h-full bg-white h-48 rounded-sm shadow-sm py-8">
             <div className="flex items-center justify-center flex-col gap-y-2">
                 <RectangleStackIcon className="w-9 h-9 text-slate-500"/>
                 <div className="flex flex-col items-center justify-center gap-y-0.5">
