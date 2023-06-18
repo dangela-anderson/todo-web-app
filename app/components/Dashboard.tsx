@@ -3,9 +3,11 @@
 import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
-import type { Database } from "../lib/database.types"
+import type { Database } from "@/lib/supabase"
 import { useRouter } from "next/navigation"
 import { Cog8ToothIcon } from "@heroicons/react/24/solid"
+import Link from "next/link"
+import Image from "next/image"
 
 interface DashboardProps {
     children: React.ReactNode
@@ -28,13 +30,15 @@ export default function Dashboard({ children }: DashboardProps) {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-stretch justify-start">
-                        <div className="flex flex-shrink-0 items-center">
-                            <img
-                                className="block h-8 w-auto"
+                        <Link href="/dashboard" className="flex flex-shrink-0 items-center">
+                            <Image
+                                width={32}
+                                height={32}
                                 src="/logo.svg"
-                                alt="Your Company"
+                                alt="ToDaily Logo"
+                                priority
                             />
-                        </div>
+                        </Link>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
@@ -55,22 +59,22 @@ export default function Dashboard({ children }: DashboardProps) {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                         >
-                            <Menu.Items className="absolute divide-y divide-solid right-0 z-10 my-2 w-48 origin-top-right rounded-sm bg-white py-2 px-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute w-56 divide-y divide-solid right-0 z-10 my-2 origin-top-right rounded-sm bg-white py-2 px-4 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                 <Menu.Item>
                                     <div className="flex flex-col py-2">
                                         <div className="flex items-start justify-between">
                                             <div className="flex items-start justify-center flex-col py-2">
-                                                <strong className="text-sm w-[154px] truncate">D'Angela Anderson</strong>
-                                                <span className="text-xs text-slate-700 w-[154px] truncate">dangelaanderson@outlook.com</span>
+                                                <strong className="text-sm w-48 truncate">{"D'Angela Anderson"}</strong>
+                                                <span className="text-xs text-slate-700 w-48 truncate">dangelaanderson@outlook.com</span>
                                             </div>
                                         </div>
-                                        <a
+                                        <Link
                                             href="/dashboard/settings"
                                             className="inline-flex w-full items-center justify-center mx-auto mt-1 px-2 py-1  text-xs text-slate-700 border rounded-sm border-slate-400"
                                         >
                                             <Cog8ToothIcon className="fill-slate-400 w-4 h-4 mr-2"/>
                                             Edit profile settings
-                                        </a>
+                                        </Link>
                                     </div>     
                                 </Menu.Item>
                                 <Menu.Item>

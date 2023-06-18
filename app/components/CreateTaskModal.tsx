@@ -36,47 +36,47 @@ export default function CreateTaskModal({ open, setOpen }: CreateTaskModalProps)
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
                 <Dialog.Panel className="relative transform overflow-hidden rounded-sm bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                    <div className="bg-white p-5">
-                        <Dialog.Title>
-                            <h1 className="text-lg font-semibold">Create Task</h1>
-                        </Dialog.Title>
+                    <div className="p-5">
+                      <Dialog.Title>
+                          <h1 className="text-lg font-semibold">Create Task</h1>
+                      </Dialog.Title>
 
-                        <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div className="col-span-full">
-                                <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
-                                   Title
-                                </label>
-                                <div className="mt-2">
-                                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                                    <input
-                                        type="text"
-                                        name="title"
-                                        id="title"
-                                        autoComplete="title"
-                                        className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 px-2"
-                                        placeholder=" Organize and Clean Kitchen Pantry"
-                                    />
-                                    </div>
-                                </div>
-                            </div>
+                      <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                          <div className="col-span-full">
+                              <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
+                                  Title
+                              </label>
+                              <div className="mt-2">
+                                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                  <input
+                                      type="text"
+                                      name="title"
+                                      id="title"
+                                      autoComplete="title"
+                                      className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 px-2"
+                                      placeholder=" Organize and Clean Kitchen Pantry"
+                                  />
+                                  </div>
+                              </div>
+                          </div>
 
-                            <div className="col-span-full">
-                                <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">
-                                    Description
-                                </label>
-                                <div className="mt-2">
-                                    <textarea
-                                        id="description"
-                                        name="description"
-                                        rows={3}
-                                        className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 px-2"
-                                        defaultValue={""}
-                                        placeholder="Take a quick inventory and jot down what you need to restock."
-                                    />
-                                </div>
-                            </div>
+                          <div className="col-span-full">
+                              <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">
+                                  Description
+                              </label>
+                              <div className="mt-2">
+                                  <textarea
+                                      id="description"
+                                      name="description"
+                                      rows={3}
+                                      className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 px-2"
+                                      defaultValue={""}
+                                      placeholder="Take a quick inventory and jot down what you need to restock."
+                                  />
+                              </div>
+                          </div>
 
-                        </div>
+                      </div>
                     </div>
                     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                         <button

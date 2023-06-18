@@ -2,10 +2,10 @@
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 import { useEffect, useState } from "react"
-import type { Database } from "../lib/database.types"
+import type { Database } from "@/lib/supabase"
 import { PlusIcon } from "@heroicons/react/24/outline"
-import CreateTaskModal from "../components/CreateTaskModal"
-import EmptyState from "../components/EmptyState"
+import CreateTaskModal from "@/app/components/CreateTaskModal"
+import EmptyState from "@/app/components/EmptyState"
 
 
 type Task = Database["public"]["Tables"]["Tasks"]["Row"]
@@ -28,7 +28,7 @@ export default function Dashboard() {
   return (
     <div className="flex-1 flex flex-col w-full justify-start gap-y-10 py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex w-full items-center justify-between">
-        <h1 className="flex items-center justify-center text-lg font-bold">
+        <h1 className="flex items-center justify-center text-lg text-slate-600 font-semibold">
           Recent Tasks 
           <p className="ml-2 text-sm font-light">({ tasks ? tasks.length : 0 })</p>
         </h1>
